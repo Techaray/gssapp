@@ -48,8 +48,8 @@
             // device APIs are available
             //
             function onDeviceReady() {
-  
-                navigator.geolocation.getCurrentPosition(onSuccess, onError1);
+            	alert('onDeviceReady');
+                navigator.geolocation.getCurrentPosition(onSuccess, onError);
             }
 
             // onSuccess Geolocation
@@ -65,12 +65,12 @@
                                     'Heading: '            + position.coords.heading               + '<br />' +
                                     'Speed: '              + position.coords.speed                 + '<br />' +
                                     'Timestamp: '          + position.timestamp                    + '<br />';
-                alert(position.coords.latitude);
+                //alert(position.coords.latitude);
             }
 
             // onError Callback receives a PositionError object
             //
-            function onError1(error) {
+            function onError(error) {
                 alert('code: '    + error.code    + '\n' +
                       'message: ' + error.message + '\n');
             }
